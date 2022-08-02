@@ -46,8 +46,8 @@ BOARD_KERNEL_CMDLINE := \
     swiotlb=1 \
     loop.max_part=7 \
     kpti=off \
-    androidboot.init_fatal_reboot_target=recovery
-    
+    printk.devkmsg=on androidboot.init_fatal_reboot_target=recovery
+
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
