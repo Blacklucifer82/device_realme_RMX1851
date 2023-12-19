@@ -92,6 +92,9 @@ iorapd.readahead.enable=true
 ro.boottime.iorapd=true
 
 # LMKD
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=15
+ro.lmk.swap_free_low_percentage=20
 ro.lmk.swap_util_max=90
 
 # Media
