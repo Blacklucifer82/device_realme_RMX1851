@@ -186,6 +186,9 @@ BOARD_SEPOLICY_M4DEFS += \
 # SurfaceFlinger
 TARGET_USE_AOSP_SURFACEFLINGER := true
 
+# Updater
+AB_OTA_UPDATER := false
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
