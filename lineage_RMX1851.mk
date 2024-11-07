@@ -4,10 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Lineage stuff
+# Inherit some common LineageOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_NOT_USES_BLUR := true
-
+TARGET_SUPPORTS_QUICK_TAP := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
@@ -19,18 +18,15 @@ PRODUCT_MANUFACTURER := realme
 PRODUCT_NAME := lineage_RMX1851
 PRODUCT_MODEL := RMX1851
 
-PRODUCT_SYSTEM_NAME := RMX1851
-PRODUCT_SYSTEM_DEVICE := RMX1851
-
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="RMX1851-user 11 RKQ1.201217.002 1623376276806 release-keys" \
-    TARGET_DEVICE=RMX1851 \
-    TARGET_PRODUCT=RMX1851
+    BuildDesc="RMX1851-user 11 RKQ1.201217.002 1623376276806 release-keys" \
+    BuildFingerprint=realme/RMX1851/RMX1851:11/RKQ1.201217.002/1623376276806:user/release-keys \
+    DeviceName=RMX1851 \
+    DeviceProduct=RMX1851 \
+    SystemDevice=RMX1851 \
+    SystemName=RMX1851
 
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := realme/RMX1851/RMX1851:11/RKQ1.201217.002/1623376276806:user/release-keys
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+# Sign builds
+PRODUCT_DEFAULT_DEV_CERTIFICATE := .android-certs/releasekey
