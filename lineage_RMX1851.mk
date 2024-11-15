@@ -18,6 +18,13 @@ PRODUCT_MANUFACTURER := realme
 PRODUCT_NAME := lineage_RMX1851
 PRODUCT_MODEL := RMX1851
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset=sdm710 \
+    RisingMaintainer=Rishi
+
+RISING_MAINTAINER=Rishi
+TARGET_ENABLE_BLUR :=false
+
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -28,5 +35,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemDevice=RMX1851 \
     SystemName=RMX1851
 
-# Sign builds
-PRODUCT_DEFAULT_DEV_CERTIFICATE := .android-certs/releasekey
