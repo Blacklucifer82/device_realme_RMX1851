@@ -4,10 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common pixelage stuff
+# Inherit some common LineageOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
-$(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -15,15 +15,11 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1851
 PRODUCT_MANUFACTURER := realme
-PRODUCT_NAME := pixelage_RMX1851
+PRODUCT_NAME := lineage_RMX1851
 PRODUCT_MODEL := RMX1851
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
 TARGET_ENABLE_BLUR :=false
-
-# Project Pixelage Flags
-TARGET_FACE_UNLOCK_SUPPORTED := true
-PIXELAGE_BUILDTYPE := UNOFFICIAL
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
