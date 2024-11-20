@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_RMX1851.mk
+    $(LOCAL_DIR)/infinity_RMX1851.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_RMX1851-userdebug \
-    lineage_RMX1851-eng
+    infinity_RMX1851-userdebug \
+    infinity_RMX1851-eng
