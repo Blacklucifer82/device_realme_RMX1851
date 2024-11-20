@@ -159,7 +159,7 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
-#Phone defination
+# AboutPhone Info
 ro.infinity.soc=Snapdragon 710
 ro.infinity.battery=4025 mAh
 ro.infinity.display=1080 x 2340, 60 Hz
