@@ -164,3 +164,6 @@ ro.infinity.soc=Snapdragon 710
 ro.infinity.battery=4025 mAh
 ro.infinity.display=1080 x 2340, 60 Hz
 ro.infinity.camera=16MP + 5MP
+
+# About phone name
+ro.product.marketname=Realme 3 Pro
