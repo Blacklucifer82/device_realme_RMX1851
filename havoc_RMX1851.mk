@@ -7,6 +7,9 @@
 $(call inherit-product, device/realme/RMX1851/device.mk)
 
 # Inherit some common havoc stuff.
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+WITH_GAPPS := true
 $(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
@@ -16,11 +19,6 @@ PRODUCT_BRAND := Realme
 PRODUCT_MODEL := realme 3 Pro
 PRODUCT_MANUFACTURER := Realme
 
-# BootAnimation Resolution
-TARGET_BOOT_ANIMATION_RES := 1080
-
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
 BUILD_FINGERPRINT := Realme/RMX1851/RMX1851:11/RKQ1.201217.002/1632356164254:user/release-keys
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -29,7 +27,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
-# Havoc Tags
-WITH_GAPPS := true
-HAVOC_BUILD_TYPE := Official
+
 
