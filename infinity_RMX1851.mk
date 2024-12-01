@@ -4,11 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Infinity stuff
+# Inherit some common Infinity X stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
-INFINITY_MAINTAINER := Sourabh
-USE_MOTO_CALCULATOR := true
+TARGET_ENABLE_BLUR :=false
+INFINITY_MAINTAINER := Sourabh_X_Divesh Kumar
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
@@ -19,9 +18,6 @@ PRODUCT_DEVICE := RMX1851
 PRODUCT_MANUFACTURER := realme
 PRODUCT_NAME := infinity_RMX1851
 PRODUCT_MODEL := RMX1851
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-TARGET_ENABLE_BLUR :=false
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
