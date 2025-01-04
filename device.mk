@@ -204,11 +204,6 @@ PRODUCT_PACKAGES += \
     libstagefright_omx.vendor \
     libminijail \
     libc2dcolorconvert \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
     libstagefright_softomx_plugin.vendor \
