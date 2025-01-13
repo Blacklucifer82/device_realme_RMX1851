@@ -5,7 +5,7 @@ clear
 echo "================================"
 echo "|                              |"
 echo "|   Realme 3 Pro Setup Script  |"
-echo "|       Branch: cr15           |"
+echo "|       Branch: pixelage15     |"
 echo "|    Maintained By: R15Hi      |"
 echo "|                              |"
 echo "================================"
