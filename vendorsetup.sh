@@ -21,5 +21,14 @@ git clone --depth=1 https://github.com/Cykeek-Labs/kernel_realme_sdm710-RUI2 ker
 
 # vendor
 banner 2>1
-echo "Cloning vendor..."
+echo "Cloning vendor and RUI2 firmware..."
 git clone https://github.com/Cykeek-Labs/android_vendor_RMX1851 -b 15 vendor/realme/RMX1851
+if [ ! -d "vendor/realme/RMX1851-fw" ]; then
+    pushd vendor/realme
+    mkdir RMX1851-fw
+    cd RMX1851-fw
+    wget https://github.com/R15Hi/Dump/releases/download/Rui2fw/Rui2fw.zip
+    unzip Rui2fw.zip
+    rm -rf Rui2fw.zip
+    popd
+fi
