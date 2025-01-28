@@ -7,7 +7,9 @@
 # Inherit some common LineageOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+TARGET_ENABLE_BLUR :=false
+INFINITY_MAINTAINER := Sourabh_X_DiveshKumar
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -15,15 +17,8 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1851
 PRODUCT_MANUFACTURER := realme
-PRODUCT_NAME := lineage_RMX1851
+PRODUCT_NAME := infinity_RMX1851
 PRODUCT_MODEL := RMX1851
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingChipset=sdm710 \
-    RisingMaintainer=Rishi
-
-RISING_MAINTAINER=Rishi
-TARGET_ENABLE_BLUR :=false
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 

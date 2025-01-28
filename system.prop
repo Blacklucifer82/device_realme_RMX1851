@@ -158,3 +158,12 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 # Wi-Fi display
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+#About info for device
+ro.infinity.soc=Snapdragon 710
+ro.infinity.battery=4045 mAh
+ro.infinity.display=1080 x 2340, 60 Hz
+ro.infinity.camera=16MP + 5MP
+
+#Device name
+ro.product.marketname=Realme 3 Pro

@@ -5,8 +5,8 @@ clear
 echo "================================"
 echo "|                              |"
 echo "|   Realme 3 Pro Setup Script  |"
-echo "|       Branch: cr15           |"
-echo "|    Maintained By: R15Hi      |"
+echo "|     Branch: Infinity-15      |"
+echo "|    Maintained By: Rishi      |"
 echo "|                              |"
 echo "================================"
 }
@@ -22,4 +22,4 @@ git clone --depth=1 https://github.com/Cykeek-Labs/kernel_realme_sdm710-RUI2 ker
 # vendor
 banner 2>1
 echo "Cloning vendor..."
-git clone https://github.com/Cykeek-Labs/android_vendor_RMX1851 -b 15 vendor/realme/RMX1851
+git clone https://github.com/Blacklucifer82/android_vendor_RMX1851.git -b 15 vendor/realme/RMX1851
