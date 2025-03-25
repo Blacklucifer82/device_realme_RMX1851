@@ -9,4 +9,5 @@ PRODUCT_MAKEFILES := \
 
 COMMON_LUNCH_CHOICES := \
     pixelage_RMX1851-userdebug \
+    pixelage_RMX1851-user \
     pixelage_RMX1851-eng

@@ -7,6 +7,8 @@
 # Inherit some common pixelageOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+PIXELAGE_MAINTAINER := Sourabh
 $(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
 # Inherit from RMX1851 device

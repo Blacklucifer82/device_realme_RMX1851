@@ -5,7 +5,7 @@ clear
 echo "================================"
 echo "|                              |"
 echo "|   Realme 3 Pro Setup Script  |"
-echo "|       Branch: pixelage15     |"
+echo "|     Branch: 15-pixelage      |"
 echo "|    Maintained By: R15Hi      |"
 echo "|                              |"
 echo "================================"
@@ -17,12 +17,12 @@ banner 2>1
 banner 2>1
 echo "Cloning Kernel..."
 git clone --depth=1 https://github.com/kdrag0n/proton-clang.git prebuilts/clang/host/linux-x86/clang-proton
-git clone --depth=1 https://github.com/Cykeek-Labs/kernel_realme_sdm710-RUI2 kernel/realme/sdm710
+git clone --depth=1 https://github.com/Blacklucifer82/kernel_realme_sdm710-RUI2 -b 15 kernel/realme/sdm710
 
 # vendor
 banner 2>1
 echo "Cloning vendor and RUI2 firmware..."
-git clone https://github.com/Cykeek-Labs/android_vendor_RMX1851 -b 15 vendor/realme/RMX1851
+git clone https://github.com/Blacklucifer82/android_vendor_RMX1851 -b 15 vendor/realme/RMX1851
 if [ ! -d "vendor/realme/RMX1851-fw" ]; then
     pushd vendor/realme
     mkdir RMX1851-fw
