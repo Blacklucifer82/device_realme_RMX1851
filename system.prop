@@ -156,6 +156,9 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
+# Enable Vulkan for HWUI
+ro.hwui.use_vulkan=true
+
 #About info for device
 ro.infinity.soc=Snapdragon 710
 ro.infinity.battery=4045 mAh
