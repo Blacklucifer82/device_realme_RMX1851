@@ -193,6 +193,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-impl \
@@ -340,6 +344,9 @@ PRODUCT_PACKAGES += \
 # Remove Unwanted Packages
 PRODUCT_PACKAGES += \
     RemovePackages
+
+# Scudo
+PRODUCT_USE_SCUDO := true
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
