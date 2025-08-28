@@ -90,6 +90,7 @@ iorapd.readahead.enable=true
 ro.boottime.iorapd=true
 
 # LMKD
+ro.lmk.use_new_strategy=true
 ro.lmk.swap_util_max=90
 
 # Media

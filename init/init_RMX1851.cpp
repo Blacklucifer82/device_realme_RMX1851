@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 LineageOS Project
+ * Copyright (C) 2025 LineageOS Project
  *
  *
  * SPDX-License-Identifier: Apache-2.0
@@ -47,31 +47,56 @@ void load_dalvikvm_properties() {
   struct sysinfo sys;
   sysinfo(&sys);
   if (sys.totalram > 6144ull * 1024 * 1024) {
-    // from - phone-xhdpi-8192-dalvik-heap.mk
+    // 8GB RAM - max multitasking
     property_override("dalvik.vm.heapstartsize", "16m");
-    property_override("dalvik.vm.heapgrowthlimit", "384m");
-    property_override("dalvik.vm.heapmaxfree", "8m");
+    property_override("dalvik.vm.heapgrowthlimit", "640m");
+    property_override("dalvik.vm.heapsize", "1536m");
+    property_override("dalvik.vm.heaptargetutilization", "0.75");
+    property_override("dalvik.vm.heapminfree", "8m");
+    property_override("dalvik.vm.heapmaxfree", "32m");
+    
+    property_override("ro.lmk.psi_complete_stall_ms", "180");
+    property_override("ro.lmk.psi_partial_stall_ms", "90");
+    property_override("ro.lmk.thrashing_limit", "40");
+    property_override("ro.lmk.thrashing_limit_critical", "45");
+    property_override("ro.lmk.thrashing_limit_decay", "15");
+    property_override("ro.lmk.filecache_min_kb", "300000");
+    property_override("ro.lmk.kill_timeout_ms", "1500");
     }
   else if (sys.totalram > 4096ull * 1024 * 1024) {
-    // from - phone-xhdpi-6144-dalvik-heap.mk
+    // 6GB RAM - balanced multitasking
     property_override("dalvik.vm.heapstartsize", "16m");
-    property_override("dalvik.vm.heapgrowthlimit", "384m");
-    property_override("dalvik.vm.heapmaxfree", "8m");
+    property_override("dalvik.vm.heapgrowthlimit", "512m");
+    property_override("dalvik.vm.heapsize", "1024m");
+    property_override("dalvik.vm.heaptargetutilization", "0.70");
+    property_override("dalvik.vm.heapminfree", "4m");
+    property_override("dalvik.vm.heapmaxfree", "16m");
+    
+    property_override("ro.lmk.psi_complete_stall_ms", "150");
+    property_override("ro.lmk.psi_partial_stall_ms", "70");
+    property_override("ro.lmk.thrashing_limit", "35");
+    property_override("ro.lmk.thrashing_limit_critical", "40");
+    property_override("ro.lmk.thrashing_limit_decay", "20");
+    property_override("ro.lmk.filecache_min_kb", "256000");
+    property_override("ro.lmk.kill_timeout_ms", "1000");
     }
   else {
-    // from - phone-xhdpi-4096-dalvik-heap.mk
+    // 4GB RAM - battery friendly
     property_override("dalvik.vm.heapstartsize", "8m");
     property_override("dalvik.vm.heapgrowthlimit", "256m");
-    property_override("dalvik.vm.heapmaxfree", "16m");
-    property_override("ro.lmk.psi_complete_stall_ms", "600");
-    property_override("ro.lmk.psi_partial_stall_ms", "130");
+    property_override("dalvik.vm.heapsize", "512m");
+    property_override("dalvik.vm.heaptargetutilization", "0.65");
+    property_override("dalvik.vm.heapminfree", "2m");
+    property_override("dalvik.vm.heapmaxfree", "8m");
+    
+    property_override("ro.lmk.psi_complete_stall_ms", "120");
+    property_override("ro.lmk.psi_partial_stall_ms", "50");
     property_override("ro.lmk.swap_free_low_percentage", "20");
-    property_override("ro.lmk.thrashing_limit", "55");
-    property_override("ro.lmk.thrashing_limit_decay", "37");
+    property_override("ro.lmk.thrashing_limit", "25");
+    property_override("ro.lmk.thrashing_limit_decay", "25");
+    property_override("ro.lmk.filecache_min_kb", "200000");
+    property_override("ro.lmk.kill_timeout_ms", "1000");
   }
-  property_override("dalvik.vm.heaptargetutilization", "0.75");
-  property_override("dalvik.vm.heapsize", "512m");
-  property_override("dalvik.vm.heapminfree", "512k");
 }
 
 void vendor_load_properties() {
