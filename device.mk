@@ -245,6 +245,20 @@ $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
 
+# Logging
+SPAMMY_LOG_TAGS := \
+    AccessPersistence \
+    AiAiEcho \
+    AppOps \
+    AppOpService\
+    HWUI \
+    ResilientAtomicFile
+
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_VENDOR_PROPERTIES += \
+    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=S)
+endif
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service \
