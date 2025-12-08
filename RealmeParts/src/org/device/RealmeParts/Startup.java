@@ -17,7 +17,6 @@
 */
 package org.device.RealmeParts;
 
-import android.app.Activity;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.content.BroadcastReceiver;
@@ -62,6 +61,16 @@ public class Startup extends BroadcastReceiver {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences (context);
         enabled = sharedPrefs.getBoolean (RealmeParts.KEY_GAME_SWITCH, false);
         restore (GameModeSwitch.getFile ( ), enabled);
+
+        enableComponent(context, ScreenOffGesture.class.getName());
+        SharedPreferences screenOffGestureSharedPreferences = context.getSharedPreferences(
+                Utils.PREFERENCES, Context.MODE_PRIVATE);
+        KernelControl.enableGestures(
+                screenOffGestureSharedPreferences.getBoolean(
+                        ScreenOffGesture.PREF_GESTURE_ENABLE, false));
+        KernelControl.enableDt2w(
+                screenOffGestureSharedPreferences.getBoolean(
+                        ScreenOffGesture.PREF_DT2W_ENABLE, true));
 
         Intent kcalIntent  = new Intent(context , KcalService.class);
         context.startService(kcalIntent);
