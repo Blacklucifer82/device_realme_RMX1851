@@ -17,7 +17,6 @@
 */
 package org.device.RealmeParts;
 
-import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -33,7 +32,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.util.Log;
-import androidx.preference.PreferenceFragment;
+import androidx.appcompat.app.AlertDialog;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreferenceCompat;
 import androidx.preference.ListPreference;
