@@ -16,6 +16,7 @@
 
 package org.device.RealmeParts.Touch;
 
+<<<<<<< HEAD
 import android.app.AlertDialog;
 <<<<<<< HEAD
 import android.app.Dialog;
@@ -23,6 +24,8 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 =======
 >>>>>>> parent of c772cc56 (RMX1851: Fully migrate to AndroidX)
+=======
+>>>>>>> parent of b1221b5e (RMX1851: {RealmeParts,RealmeDoze}: Adapt our features while fully migrate to AndroidX)
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -32,6 +35,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+<<<<<<< HEAD
+=======
+import androidx.appcompat.app.AlertDialog;
+>>>>>>> parent of b1221b5e (RMX1851: {RealmeParts,RealmeDoze}: Adapt our features while fully migrate to AndroidX)
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.Preference.OnPreferenceClickListener;
