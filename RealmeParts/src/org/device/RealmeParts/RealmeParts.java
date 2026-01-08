@@ -17,6 +17,8 @@
 */
 package org.device.RealmeParts;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
