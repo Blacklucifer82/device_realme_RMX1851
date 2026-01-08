@@ -17,9 +17,12 @@
 package org.device.RealmeParts.Touch;
 
 import android.app.AlertDialog;
+<<<<<<< HEAD
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
+=======
+>>>>>>> parent of c772cc56 (RMX1851: Fully migrate to AndroidX)
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
