@@ -89,11 +89,6 @@ ro.iorapd.enable=true
 iorapd.readahead.enable=true
 ro.boottime.iorapd=true
 
-# LMKD
-ro.lmk.low=800
-ro.lmk.medium=700
-ro.lmk.kill_timeout_ms=1000
-
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 ro.media.recorder-max-base-layer-fps=60
