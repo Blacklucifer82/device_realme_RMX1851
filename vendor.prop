@@ -109,6 +109,9 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 persist.bluetooth.a2dp_offload.disabled=true
 ro.bluetooth.a2dp_offload.supported=true
 
+# Blur (Kawase2)
+debug.renderengine.blur_algorithm=kawase2
+
 # Camera
 vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
 persist.camera.HAL3.enabled=1
