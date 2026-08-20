@@ -387,14 +387,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal.RMX1851 \
 
-# Shipping RUI2 firmware
-FW_DIR := vendor/realme/RMX1851-fw
-ifeq (,$(wildcard $(FW_DIR)))
-else
-    FW_FILES := $(wildcard $(FW_DIR)/*)
-    PRODUCT_COPY_FILES += $(foreach file,$(FW_FILES),$(file):install/firmware-update/$(notdir $(file)))
-endif
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
